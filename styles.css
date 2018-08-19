@@ -1,0 +1,145 @@
+@charset "UTF-8";
+html, body {
+  background: linear-gradient(to bottom, #2490a3, #c04b5f);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: "Calibri", sans-serif;
+  color: rgba(255, 255, 255, 0.945);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 32px;
+  font-size: 24px;
+}
+
+.container {
+  width: 448px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: right;
+}
+
+.title, .controls, .button {
+  flex: none;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  border-radius: 100%;
+  font-size: 24px;
+  position: relative;
+  top: 34px;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.192);
+}
+button:focus {
+  outline: none;
+}
+
+#newTODO {
+  height: 104px;
+  width: 408px;
+  font-size: 24px;
+  padding-right: 16px;
+  border: none;
+  background: none;
+  text-align: right;
+}
+
+#todoLine {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  color: white;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.651);
+  font-family: "Calibri", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+
+.todo-container {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+.todo-container:first-of-type {
+  border-top: 1px solid #333;
+}
+
+.controls {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+[type=checkbox] {
+  /* checked mark aspect */
+  /* checked mark aspect changes */
+}
+[type=checkbox]:not(:checked), [type=checkbox]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type=checkbox]:not(:checked) + label, [type=checkbox]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+[type=checkbox]:not(:checked) + label:before, [type=checkbox]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+[type=checkbox]:not(:checked) + label:after, [type=checkbox]:checked + label:after {
+  content: "✔";
+  position: absolute;
+  top: 0.2em;
+  left: 0.275em;
+  font-size: 1em;
+  line-height: 0.8;
+  color: #2490a3;
+  transition: all 0.2s;
+  font-family: Helvetica, Arial, sans-serif;
+}
+[type=checkbox]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type=checkbox]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #c04b5f !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
